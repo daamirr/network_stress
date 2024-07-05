@@ -88,7 +88,7 @@ def draw_plot(network, epochs, ab=None):
             for j in range(len(Z)):
                 Y_real.append(float(rows[i][j+3]))
 
-                test_data = [[sh_trans], [temp_trans], [Z[j] / 4], [thickness]]
+                test_data = [[sh_trans], [temp_trans], [Z[j] / 4], [(thickness - 1) / 3]]
                 stress = taking_stress(test_data)
                 Y.append(stress[0][0])  # иначе получим array
         
