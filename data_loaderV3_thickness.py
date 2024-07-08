@@ -1,3 +1,9 @@
+""" 
+
+
+"""
+
+
 import numpy as np
 import csv
 
@@ -106,12 +112,6 @@ class Data_load():
         ymin = min(param)
         ymax = max(param)
         return [(yi - ymin) / (ymax - ymin) for yi in param]
-    
-    def reverse_transfer(self, net_func, Specific_Heat, Thermal_Conductivity, Temperature_Magnitude):
-        "приведение обратно к естественному промежутку"
-
-        data = [[(Specific_Heat - minSH)/(maxSH - minSH)], [(Thermal_Conductivity - minTC)/(maxTC - minTC)], [(Temperature_Magnitude - minTM)/(maxTM - minTM)]]
-        return net_func(data) * (self.max_deform - self.min_deform) + self.min_deform
 
     def separation_into_data(self, procent_train, all_data):
         """ Разделение датасета на две подвыборки: обучающую и тестовую
@@ -140,6 +140,9 @@ class Data_load():
         return train_data, test_data
 
 
+
+
+# =============== Тесты ==================
 # print(Data_load().accommodate_list(100))
 
 # tr, te = Data_load().load(80)
