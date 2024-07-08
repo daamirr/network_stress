@@ -1,3 +1,11 @@
+"""
+запуск нейронной сети
+и визуальное отображение результатов обучения
+
+"""
+
+
+
 import data_loaderV3_thickness, v1
 
 import numpy as np
