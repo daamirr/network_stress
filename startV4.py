@@ -6,7 +6,7 @@
 
 
 
-import data_loaderV3_thickness, v1
+import data_loaderV3_thickness, networkV1
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -119,7 +119,7 @@ def draw_plot(network, epochs, ab=None):
 
 
 
-net = v1.Network([4, 30, 10, 1])
+net = networkV1.Network([4, 30, 10, 1])
 
 # print(net.sizes)
 epochs = 5
