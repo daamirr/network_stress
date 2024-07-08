@@ -16,7 +16,7 @@ import startV4
 net = startV4.networkV1.Network([4, 10, 1])
 
 (начать обучение)
-net.SGD(train, кол-во эпох, мини-выборка, скорость обучения, test)
+net.SGD(обучающая выборка, кол-во эпох, мини-выборка, скорость обучения, тестовая выборка)
 например
 net.SGD(startV4.train, 8, 2, 0.1, startV4.test)
 
